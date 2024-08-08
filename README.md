@@ -9,7 +9,7 @@ Download latest Madgraph version 3.4 from [launchpad](https://launchpad.net/mg5a
 source /cvmfs/sft.cern.ch/lcg/views/LCG_99/x86_64-centos7-gcc10-opt/setup.sh
 git clone git@github.com:mstamenk/spanet-hhh-samples.git
 cd spanet-hhh-samples
-git clone git@ggithub.com/mg5amcnlo/mg5amcnlo -b v3.4.1 MG5_aMC_v3.4.1
+git clone git@ggithub.com/mg5amcnlo/mg5amcnlo -b v3.4.1 MG5_aMC_v3_4_1
 cd MG5_aMC_v3_4_1 
 ./bin/mg5_aMC
 install pythia8
@@ -26,6 +26,7 @@ Launch HHH from cards
 
 ```bash
 ./bin/mg5_aMC
+convert model ./models/loop_sm_c3d4
 !cat ../production-cards/GF_HHH_SM_loop_sm_c3d4_proc_card.dat
 # copy the information there in the shell
 launch
