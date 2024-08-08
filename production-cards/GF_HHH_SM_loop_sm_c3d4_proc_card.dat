@@ -27,4 +27,15 @@ define lep = e+ e- mu+ mu-
 define nus = ve~ vm~ ve vm
 generate p p > h h h [noborn=QCD]
 output GF_HHH_loop_sm_c3d4-spanet -nojpeg
-
+launch
+	shower=Pythia8
+	detector=Delphes
+	madspin=ON
+	done
+	../production-cards/param_card.dat
+	set param_card mass 25 150.0
+	../production-cards/GF_HHH_SM_loop_sm_c3d4_run_card.dat
+	../production-cards/delphes_card_CMS.tcl
+	../production-cards/madspin_card.dat
+	done
+	
